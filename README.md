@@ -1,6 +1,20 @@
-# 央视直播
+# 央视直播 · CCTV Live for Android TV
 
-原生 Android TV 应用，包名 `com.hughdai.cctvlive`，版本 1.1.0。支持 Android 5.0 及以上；已在小米 L55MA-SPL、HyperOS Android 14 设备上测试。
+一款面向电视大屏的 CCTV 直播 Android TV 应用，支持 CCTV-1～CCTV-17、CCTV-5+，提供多线路切换、频道记忆、自动重试和高清优先播放。适用于 Android TV、Google TV 以及支持 Android 应用安装的智能电视。
+
+关键词：CCTV 直播、央视直播、Android TV、电视直播、IPTV、CCTV-5+、小米电视、高清直播、HLS、M3U。
+
+当前版本：`1.1.0` · 包名：`com.hughdai.cctvlive`
+
+已在小米 L55MA-SPL、Xiaomi HyperOS 3.0、Android 14 设备上测试；小米电视只是测试设备，并非唯一支持设备。
+
+## 下载
+
+[下载最新 APK：cctv_live-1.1.0.apk](https://github.com/HughDai/cctv_live/releases/latest)
+
+APK 文件名格式为 `cctv_live-版本号.apk`。App 内置 GitHub Releases 更新检查，发布新版本时请使用相同命名规则。
+
+English keywords: CCTV live streaming, China Central Television, Android TV IPTV player, HLS live TV, Chinese TV channels.
 
 ## 操作
 
@@ -18,11 +32,15 @@
 
 ## 播放源
 
-内置地址与出处记录在 `app/src/main/assets/channels.json`。公开源会改变或失效，电视上的实际画质和节目台标才是判断依据。源探测成功不代表长期稳定。
+应用内置经过整理的频道播放源。公开直播源可能改变或失效，电视上的实际画质和节目台标才是判断依据；单次源探测成功不代表长期稳定。
 
 CCTV-1、2、4、7、9、10、12、13、17 使用央视新闻官方动态入口，播放时自动取得当次签名；无需手动更新临时地址。官方各低画质档位作为显式备用线路，卡顿时按失败策略降档。导出的M3U包含官方短效地址快照，到期后外部播放器需重新取得；App自动刷新。
 
 默认订阅：`https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_cctv_status.m3u8`。启动先使用本地配置，距上次成功更新超过一天时在后台尝试更新，也可手动更新或改为自己的 HTTPS 订阅。GitHub 在大陆可能访问失败，失败会保留旧列表。
 
 支持 UTF-8 M3U 与本项目频道 JSON 格式。接收 CCTV-1～17 和 CCTV-5+，排除4K和CCTV-4欧美版；CCTV-5+ 在 JSON 中使用稳定编号105，排列在5与6之间。保留已验证内置源，优先接收本次新订阅地址，再补历史地址；每台最多8条，去除重复及本次已确认的误标/异常线路。新订阅源不会中断正在播放的视频，下次换台或重启生效。恢复内置源不会清除频道记忆。
+
+## 说明
+
+这是个人使用和技术验证项目，直播源的可用性取决于源站、网络环境和频道版权状态。项目不提供电视节目内容，也不保证所有地区、所有时间持续可用。请遵守当地法律法规和相关平台的使用条款。
 
