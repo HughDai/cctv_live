@@ -1,6 +1,6 @@
 # 央视直播
 
-原生 Android TV 应用，包名 `com.hughdai.cctvlive`，版本 1.0.9。支持 Android 5.0 及以上；已在小米 L55MA-SPL、HyperOS Android 14 设备上测试。
+原生 Android TV 应用，包名 `com.hughdai.cctvlive`，版本 1.1.0。支持 Android 5.0 及以上；已在小米 L55MA-SPL、HyperOS Android 14 设备上测试。
 
 ## 操作
 
